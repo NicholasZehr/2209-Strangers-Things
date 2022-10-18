@@ -1,10 +1,11 @@
 import React from "react";
-import { Navbar, Posts } from "./";
+import { Navbar, Posts, Register } from "./";
 const Main = () => {
   return (
     <div id="main">
       <Navbar />
-      <Posts />
+      {/* <Posts /> */}
+    <Register/>
     </div>
   );
 };
