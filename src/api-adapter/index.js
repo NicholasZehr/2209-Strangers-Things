@@ -15,12 +15,12 @@ export async function registerUser(username, password) {
             'Content-Type': 'application/json'
         }, body: JSON.stringify({
             user: {
-                username: 'NicholasZehr',
-                password: 'supersneakypass'
+                username,
+                password
             }
         })
     }
     const response = await fetch(`${BASE_URL}/api/${COHORT}/users/register`, options)
     const result = await response.json()
-    console.log(result)
+    return result.data
 }

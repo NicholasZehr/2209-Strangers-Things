@@ -1,12 +1,13 @@
 import React from "react";
 import { registerUser } from "../api-adapter";
 const Register = (props) => {
-    function handleSubmit(event) {
+    async function handleSubmit(event) {
         event.preventDefault()
-        console.log(event)
         const username = event.target[0].value
         const password = event.target[1].value
-        console.log(username, password)
+        const registeredUser = await registerUser(username, password)
+        const token = registeredUser.token
+        console.log(token)
     }
   return (
     <div className="box">
