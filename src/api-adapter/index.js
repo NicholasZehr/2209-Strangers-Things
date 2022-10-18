@@ -7,3 +7,20 @@ export async function getPosts() {
     const posts = result.data.posts
     return posts
 }
+
+export async function registerUser(username, password) {
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        }, body: JSON.stringify({
+            user: {
+                username: 'NicholasZehr',
+                password: 'supersneakypass'
+            }
+        })
+    }
+    const response = await fetch(`${BASE_URL}/api/${COHORT}/users/register`, options)
+    const result = await response.json()
+    console.log(result)
+}
