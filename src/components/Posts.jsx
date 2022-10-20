@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import {getPosts} from '../api-adapter'
+import {SinglePost} from "./"
 const Posts = (props) => {
     const [posts, setAllPosts] = useState([])
     useEffect(() => {
@@ -10,10 +11,10 @@ const Posts = (props) => {
         fetchPosts()
     }, [])
 return (
-    <div className='box'>{`This is your Posts Component`} 
+    <div className='posts'>{`This is your Posts Component`} 
     {
             posts.length ? posts.map((post) => {
-                return <div>{post.title}</div>
+                return <SinglePost post={post} />
         }) : <div>Loading Your Posts</div>
         }
     </div>

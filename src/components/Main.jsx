@@ -4,8 +4,8 @@ const Main = () => {
   return (
     <div id="main">
       <Navbar />
-      {/* <Posts /> */}
-    <Register/>
+      <Posts />
+    {/* <Register/> */}
     </div>
   );
 };
