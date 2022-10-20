@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Posts, Register, PostDetails } from "./";
+import { Navbar, Posts, Register, PostDetails, Login } from "./";
 import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } from "react-router-dom"
 const Main = () => {
 
@@ -8,7 +8,8 @@ const Main = () => {
       <Route path="posts" element={<Posts />}>
         <Route path="details/:id" element={<PostDetails/>}></Route>
       </Route>
-      <Route path="register" element={<Register/>}/>
+      <Route path="register" element={<Register />} />
+      <Route path="login" element={<Login />} />
 </Route>
   ))
   return (
