@@ -6,7 +6,7 @@ const Main = () => {
   const [posts, setAllPosts] = useState([])
   useEffect(() => {
     async function fetchPosts() {
-        const allPosts = await getPosts()
+        const allPosts = await getPosts(localStorage.getItem('token'))
         setAllPosts(allPosts)
     }
     fetchPosts()

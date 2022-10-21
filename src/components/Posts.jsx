@@ -1,9 +1,8 @@
 import React, {useEffect, useState} from 'react'
-import {getPosts} from '../api-adapter'
 import { SinglePost } from "./"
 const Posts = (props) => {
-const posts = props.posts
-console.log(props)
+    const posts = props.posts
+    console.log(posts)
 return (
     <div className='posts'>{`This is your Posts Component`} 
           {  posts.length ? posts.map((post) => {
